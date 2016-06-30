@@ -1,0 +1,107 @@
+http://ruby-doc.org/core-2.1.1/String.html
+http://ruby-doc.org/core-2.1.1/Integer.html
+http://ruby-doc.org/core-2.1.1/Random.html
+https://ru.wikibooks.org/wiki/Ruby/%D0%91%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B5_%D1%82%D0%B8%D0%BF%D1%8B_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85
+
+ïóòü ê íîäJS
+
+C:\Program Files\nodejs\
+=========================================================
+DateTimePicker
+
+github.com/xdan/datetimepicker
+========================================================
+ÈÍÒÅÐÅÑÍÎÅ
+github.com/DefactoSoftware/Hours
+===============================================================
+
+phrogz.net/programmingruby/tut_classes.html
+=======================================================
+ÑÏÐÀÂÊÀ ÏÎ ACTIVERECORDS
+
+guides.rubyonrails.org/active_record_querying.html
+=============================================================
+ÑÏÐÀÂÊÀ ÏÎ VALIDATIONS
+
+guides.rubyonrails.org/active_record_validations.html
+=============================================================
+FIRST VISIT JS
+
+github.com/ro31337/first-visit-js
+===============================================================
+
+15 ÂÎÏÐÎÑÎÂ ÍÀ ÑÎÁÅÑÅÄÎÂÀÍÈÈ
+
+gist.github.com/ryansobol/5252653
+============================================================
+ÌÅÒÎÄ SAVE ACTIVERECORD
+
+api.rubyonrails.ors/classes/ActiveRecord/Persistance.html#method-i-save
+=============================================================
+ÊÀÊ ÐÀÁÎÒÀÅÒ HTTP
+
+stackoverfow.com/questions/20918321/how-exactly-http-protocol-works
+================================================================================
+
+SQLLITE
+
+www.sqlishard.com
++++++++++++++++++
+ÈÍÑÒÐÓÌÅÍÒÛ
+sqlabs.com/sqlitemanager.php
+addons.mozilla.org/en-US/firefox/addon/sqlite-manager/ - firefox
+sqlitedog.com - ñëîìàëîñü(softoroom.net/topic83847.html)
+sqliteadmin.orbmu2k.de
+sqlitestudio.pl
+plugring.farmanager.com/plugin.php?pid=872 - ïëàãèí äëÿ ôàðà
++++++++++++++++++
+CREATE TABLE "Cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT, "Name" VARCHAR, "Price" INTEGER);
+=======================================================
+ìîäóëè:
+
+tutorialspoint.com/ruby/ruby_modules.htm
+
+ruby-doc.org/stdlib-2.1.2/libdoc/net/http/rdoc/Net/HTTP.html
+
+íàñòðîéêà ãåìîâ
+
+hhtp://putshello.wordpress.com/2014/08/03/installing-ruby-for-windows-the-right-way/
+
+GOW
+
+github.com/bmatzelle/gow
+
+êàê îòïðàâëÿòü ïî÷òó ÷åðåç GMAIL
+
+stackoverflow.com/questions/2068148/contact-form-in-ruby-sinatra-and-haml
+
+jQuery simplecolor
+
+github.com/tkrotoff/jquery-simplecolorpicker
+
+
+happyhours.io
+
+ñêðèïò äëÿ ssl ñåðòèôèêàòîâ 
+
+============================
+require 'net/http'
+
+ruby_install_dir = 'c:\Ruby200-x64'
+cacert_file = "#{ruby_install_dir}\\cacert.pem"
+
+Net::HTTP.start("curl.haxx.se") do |http|
+  resp = http.get("/ca/cacert.pem")
+  if resp.code == "200"
+    open(cacert_file, "wb") { |file| file.write(resp.body) }
+    puts "\n\nA bundle of certificate authorities has been installed to"
+    puts "#{cacert_file}\n"
+    puts "* Please set SSL_CERT_FILE in your current command prompt session with:"
+    puts "     set SSL_CERT_FILE=#{cacert_file}"
+    puts "* To make this a permanent setting, add it to Environment Variables"
+    puts "  under Control Panel -> Advanced -> Environment Variables"
+  else
+    abort "\n\n>>>> A cacert.pem bundle could not be downloaded."
+  end
+end
+==============================
