@@ -16,31 +16,31 @@ $(function() {
 <p><%=@message%></p>
 			<form action="/visit" method="POST" role="form">
 			  
-			 <select name="master" class="form-control">
+			<!--  <select name="master" class="form-control">
 			<% @barbers.each do |item| %>
   				<option <%=@master == item['name']? 'selected' : '' %>><%=item['name']%></option>
   			<% end %>
-			</select>
+			</select> -->
 
 
 			  <div class="form-group">
 			    <label>Ваше имя</label>
-			    <input name="username" type="text" class="form-control" placeholder="Введите ваше имя" value="<%=@username%>">
+			    <input name="client[name]" type="text" class="form-control" placeholder="Введите ваше имя" value="">
 			  </div>
 
 			  <div class="form-group">
 			    <label>Ваш телефон</label>
-			    <input name="phone" type="text" class="form-control" placeholder="Введите ваш телефон" value="<%=@phone%>">
+			    <input name="client[phone]" type="text" class="form-control" placeholder="Введите ваш телефон" value="">
 			  </div>
 
 			  <div class="form-group">
     				<label>Когда вас ждать?</label>
-    				<input id="datetimepicker" name="datetime" type="text" class="form-control" placeholder="Введите дату и время" value="<%= @datetime %>">
+    				<input id="datetimepicker" name="client[datestamp]" type="text" class="form-control" placeholder="Введите дату и время" value="">
   				</div>
 
 			   <div class="form-group">
 			    <label>Какой цвет вы выберите?</label>
-			  <select id="color" name="color" value="<%=@color%>">
+			  <select id="color" name="client[color]" value="">
 				  <option value="#7bd148">Green</option>
 				  <option value="#5484ed">Bold blue</option>
 				  <option value="#a4bdfc">Blue</option>
